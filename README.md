@@ -17,6 +17,7 @@ Designed to showcase software engineering and AI projects.
 
 - Node.js (v18+)
 - npm
+- Python 3 (for verification scripts)
 
 ### Installation
 
@@ -47,9 +48,30 @@ This project is configured for deployment on GitHub Pages.
    ```
    This will build the project and push the `dist` folder to the `gh-pages` branch.
 
-## Testing
+## Testing & Verification
 
-Currently, the project relies on manual verification.
+### Automated Verification (Playwright)
+
+The project includes Python scripts using Playwright to verify core functionality (Home page, Theme toggle, Project details).
+
+1. Install Playwright for Python:
+   ```bash
+   pip install playwright
+   playwright install chromium
+   ```
+
+2. Ensure the dev server is running:
+   ```bash
+   npm run dev
+   ```
+
+3. Run the verification script:
+   ```bash
+   python3 verification/verify_portfolio.py
+   ```
+
+### Manual Verification
+
 To verify the build locally before deploying:
 ```bash
 npm run build

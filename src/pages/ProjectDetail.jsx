@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { projects } from '../data/projects';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, PlayCircle } from 'lucide-react';
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -40,9 +40,16 @@ const ProjectDetail = () => {
               <p className="text-secondary text-lg">{project.description}</p>
             </div>
             <div className="flex gap-3 flex-shrink-0">
-              <a href={project.link} className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-500 transition-colors shadow-lg shadow-primary-500/20">
-                <ExternalLink size={18} className="mr-2" /> Live Demo
-              </a>
+              {project.demoType === 'video' ? (
+                <a href={project.demoUrl} className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-500 transition-colors shadow-lg shadow-primary-500/20">
+                    <PlayCircle size={18} className="mr-2" /> Watch Demo
+                </a>
+              ) : (
+                <a href={project.demoUrl} className="inline-flex items-center px-5 py-2.5 rounded-lg bg-primary-600 text-white text-sm font-medium hover:bg-primary-500 transition-colors shadow-lg shadow-primary-500/20">
+                    <ExternalLink size={18} className="mr-2" /> Live Demo
+                </a>
+              )}
+
               <a href="#" className="inline-flex items-center px-5 py-2.5 rounded-lg bg-surface border border-base text-secondary text-sm font-medium hover:bg-surface-variant transition-colors">
                 <Github size={18} className="mr-2" /> Code
               </a>
