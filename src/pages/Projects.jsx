@@ -1,32 +1,6 @@
 import ProjectCard from '../components/ProjectCard';
 import { motion } from 'framer-motion';
-
-const projects = [
-  {
-    id: 1,
-    title: 'AI Image Generator',
-    description: 'A deep learning model capable of generating high-resolution images from text descriptions. Built with PyTorch and React.',
-    tags: ['AI', 'React', 'PyTorch'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 2,
-    title: 'Smart Home Automation',
-    description: 'IoT dashboard for controlling smart home devices. Features real-time data visualization and energy consumption analytics.',
-    tags: ['IoT', 'Dashboard', 'Data Viz'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1558002038-1091a1661116?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 3,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with secure payment processing, inventory management, and personalized recommendations.',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop'
-  },
-];
+import { projects } from '../data/projects';
 
 const Projects = () => {
   return (
@@ -46,7 +20,10 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex"
             >
+               {/* className="flex" ensures the wrapper allows the child ProjectCard (which is h-full) to stretch if the grid cell stretches.
+                   Grid items stretch by default, but intermediate wrappers need to pass it down. */}
                 <ProjectCard project={project} />
             </motion.div>
           ))}

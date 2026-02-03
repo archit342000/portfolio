@@ -1,33 +1,7 @@
 import { motion as Motion } from 'framer-motion';
 import Carousel from './Carousel';
 import { Link } from 'react-router-dom';
-
-const projects = [
-  {
-    id: 1,
-    title: 'AI Image Generator',
-    description: 'A deep learning model capable of generating high-resolution images from text descriptions. Built with PyTorch and React.',
-    tags: ['AI', 'React', 'PyTorch'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 2,
-    title: 'Smart Home Automation',
-    description: 'IoT dashboard for controlling smart home devices. Features real-time data visualization and energy consumption analytics.',
-    tags: ['IoT', 'Dashboard', 'Data Viz'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1558002038-1091a1661116?q=80&w=1000&auto=format&fit=crop'
-  },
-  {
-    id: 3,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with secure payment processing, inventory management, and personalized recommendations.',
-    tags: ['Next.js', 'Stripe', 'PostgreSQL'],
-    link: '#',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop'
-  },
-];
+import { projects } from '../data/projects';
 
 const Hero = () => {
   return (
@@ -46,44 +20,47 @@ const Hero = () => {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <Motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
-          >
-            Building the future with <span className="text-indigo-600 dark:text-indigo-400">AI & Code</span>
-          </Motion.h1>
-          <Motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400"
-          >
-            I&apos;m a software engineer specializing in artificial intelligence and modern web technologies.
-          </Motion.p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Link
-              to="/projects"
-              className="rounded-full bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400"
-            >
-              View All Projects
-            </Link>
-          </div>
-        </div>
-
-        {/* Carousel Section */}
-        <div className="mt-20">
+      <div className="flex flex-col">
+        {/* Carousel Section - Placed at the top as requested */}
+        <div className="w-full mb-12 mt-8">
             <Motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1, delay: 0.5 }}
+                transition={{ duration: 1 }}
                 className="relative"
             >
                 <Carousel projects={projects} />
             </Motion.div>
+        </div>
+
+        {/* Hero Content - Placed below Carousel */}
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 sm:pb-32">
+          <div className="mx-auto max-w-2xl text-center">
+            <Motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
+            >
+              Building the future with <span className="text-indigo-600 dark:text-indigo-400">AI & Code</span>
+            </Motion.h1>
+            <Motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400"
+            >
+              I&apos;m a software engineer specializing in artificial intelligence and modern web technologies.
+            </Motion.p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Link
+                to="/projects"
+                className="rounded-full bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400"
+              >
+                View All Projects
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
