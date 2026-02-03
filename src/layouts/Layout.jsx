@@ -19,6 +19,7 @@ const Layout = () => {
 
   // Close menu on route change
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsMenuOpen(false);
   }, [location]);
 
@@ -35,7 +36,7 @@ const Layout = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Brand */}
-            <Link to="/" className="text-xl font-bold tracking-tight hover:text-primary transition-colors text-primary">
+            <Link to="/" className="text-xl font-mono font-bold tracking-tight hover:text-primary transition-colors text-primary">
               Portfolio
             </Link>
 

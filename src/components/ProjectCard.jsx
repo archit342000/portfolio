@@ -17,14 +17,14 @@ const ProjectCard = ({ project, className = "" }) => (
       </div>
       <div className="p-5 flex-grow flex flex-col">
         <div className="mb-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-primary-600 bg-primary-50 dark:bg-primary-900/20 px-2 py-0.5 rounded border border-primary-100 dark:border-primary-800/30">
+            <span className="font-mono text-xs font-semibold uppercase tracking-wider text-primary-600 bg-primary-50 dark:bg-primary-900/20 px-2 py-0.5 rounded border border-primary-100 dark:border-primary-800/30">
                 {project.category}
             </span>
         </div>
-        <h3 className="text-lg font-bold text-primary mb-2 group-hover/card:text-primary-600 transition-colors">{project.title}</h3>
+        <h3 className="font-mono text-lg font-bold text-primary mb-2 group-hover/card:text-primary-600 transition-colors">{project.title}</h3>
         <p className="text-sm text-secondary line-clamp-2 mb-4 flex-grow">{project.description}</p>
 
-        <div className="flex items-center text-primary-600 text-sm font-medium mt-auto">
+        <div className="font-mono flex items-center text-primary-600 text-sm font-medium mt-auto">
           <span>View Details</span>
           <ArrowRight size={16} className="ml-1 transition-transform group-hover/card:translate-x-1" />
         </div>

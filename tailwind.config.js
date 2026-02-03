@@ -9,12 +9,18 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         primary: {
           DEFAULT: 'var(--primary)',
-          500: '#6366f1',
-          600: '#4f46e5',
+          500: '#8b5cf6', // Violet 500
+          600: '#7c3aed', // Violet 600
+        },
+        accent: {
+          DEFAULT: '#06b6d4', // Cyan 500
+          500: '#06b6d4',
+          600: '#0891b2',
         },
         canvas: 'var(--bg-canvas)',
         surface: {
@@ -25,6 +31,7 @@ export default {
         border: {
           base: 'var(--border-base)',
           control: 'var(--border-control)',
+          glow: 'var(--border-glow)',
         }
       },
       textColor: {
@@ -32,10 +39,12 @@ export default {
         secondary: 'var(--text-secondary)',
         disabled: 'var(--text-disabled)',
         'on-brand': 'var(--text-on-brand)',
+        mono: 'var(--text-mono)',
       },
       animation: {
         'scroll': 'scroll 40s linear infinite',
         'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         scroll: {
