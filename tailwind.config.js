@@ -14,11 +14,13 @@ export default {
       colors: {
         primary: {
           DEFAULT: 'var(--primary)',
+          400: '#a78bfa', // Violet 400
           500: '#8b5cf6', // Violet 500
           600: '#7c3aed', // Violet 600
         },
         accent: {
           DEFAULT: '#06b6d4', // Cyan 500
+          400: '#22d3ee', // Cyan 400
           500: '#06b6d4',
           600: '#0891b2',
         },

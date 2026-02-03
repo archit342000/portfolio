@@ -31,7 +31,7 @@ const ProjectCard = ({ project, className = "" }) => (
             <Cpu size={14} className="text-primary-500 opacity-50 group-hover:animate-pulse" />
         </div>
 
-        <h3 className="font-mono text-lg font-bold text-primary mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary-400 group-hover:to-accent-400 transition-all duration-300">
+        <h3 className="font-mono text-lg font-bold text-primary mb-2 group-hover:text-accent-400 transition-colors duration-300">
           {project.title}
         </h3>
 
