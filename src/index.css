@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Option A: Indigo */
+  --primary-light: #4F46E5;
+  --primary-dark: #818CF8;
+
+  /* Color values for opacity composition if needed */
+  --primary-500: #6366f1;
+
+  /* Backgrounds - Light */
+  --bg-canvas: #fafafa; /* Zinc-50 */
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-surface-variant: #f4f4f5; /* Zinc-100 */
+
+  /* Content - Light */
+  --text-primary: #18181b; /* Zinc-900 */
+  --text-secondary: #71717a; /* Zinc-500 */
+  --text-disabled: rgba(0, 0, 0, 0.38);
+  --text-on-brand: #ffffff;
+
+  /* Borders - Light */
+  --border-base: #e4e4e7; /* Zinc-200 */
+  --border-control: #d4d4d8; /* Zinc-300 */
+
+  /* Assignments */
+  --primary: var(--primary-light);
+}
+
+.dark {
+  /* Backgrounds - Dark */
+  --bg-canvas: #09090b; /* Zinc-950 */
+  --bg-surface: #18181b; /* Zinc-900 */
+  --bg-surface-elevated: #18181b;
+  --bg-surface-variant: #27272a; /* Zinc-800 */
+
+  /* Content - Dark */
+  --text-primary: #fafafa; /* Zinc-50 */
+  --text-secondary: #a1a1aa; /* Zinc-400 */
+  --text-disabled: rgba(255, 255, 255, 0.38);
+  --text-on-brand: #000000;
+
+  /* Borders - Dark */
+  --border-base: #27272a; /* Zinc-800 */
+  --border-control: #3f3f46; /* Zinc-700 */
+
+  /* Assignments */
+  --primary: var(--color-primary-dark);
+}
+
+@layer base {
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+}
