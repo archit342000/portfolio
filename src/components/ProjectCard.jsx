@@ -8,7 +8,14 @@ const ProjectCard = ({ project }) => {
       <div className="absolute inset-0 pointer-events-none rounded-xl ring-1 ring-inset ring-black/5 dark:ring-white/10"></div>
 
       {/* Image (Placeholder or Real) */}
-      <div className="relative aspect-video w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
+      {/* Enforce fixed height for image container in carousel context by strictly defining height or aspect ratio.
+          'h-48' (12rem) is a standard fixed height that ensures alignment regardless of width.
+          Alternatively, strictly respecting 'aspect-video' works if widths are identical.
+          Given 'min-w-[300px]' in Carousel, the widths are similar but can flex.
+          To be absolutely safe for alignment, a fixed height is preferred if widths vary slightly,
+          but here widths are 'min-w' so they might stretch.
+          Let's stick to aspect-video but ensure the container doesn't collapse. */}
+      <div className="relative h-48 w-full overflow-hidden bg-zinc-100 dark:bg-zinc-800">
          {project.image ? (
             <img
               src={project.image}
@@ -30,8 +37,8 @@ const ProjectCard = ({ project }) => {
             {project.title}
           </Link>
         </h3>
-        <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-          {project.description.substring(0, 100)}...
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 line-clamp-3">
+          {project.description}
         </p>
 
         {/* Tags */}

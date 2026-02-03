@@ -21,34 +21,38 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col">
-        {/* Carousel Section - Placed at the top as requested */}
-        <div className="w-full mb-12 mt-8">
+        {/* Title Section - Placed at the top */}
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8 sm:pt-12 text-center">
+            <Motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
+            >
+              Building the future with <span className="text-indigo-600 dark:text-indigo-400">AI & Code</span>
+            </Motion.h1>
+        </div>
+
+        {/* Carousel Section - Placed in the middle */}
+        <div className="w-full mb-12 mt-12">
             <Motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
                 className="relative"
             >
                 <Carousel projects={projects} />
             </Motion.div>
         </div>
 
-        {/* Hero Content - Placed below Carousel */}
+        {/* Rest of the Text Content - Placed below Carousel */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 sm:pb-32">
           <div className="mx-auto max-w-2xl text-center">
-            <Motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
-            >
-              Building the future with <span className="text-indigo-600 dark:text-indigo-400">AI & Code</span>
-            </Motion.h1>
             <Motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400"
+              className="text-lg leading-8 text-zinc-600 dark:text-zinc-400"
             >
               I&apos;m a software engineer specializing in artificial intelligence and modern web technologies.
             </Motion.p>
