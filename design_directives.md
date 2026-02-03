@@ -1,39 +1,43 @@
-# Design Directives: Neural Aesthetics System (v2.3)
+# Design Directives: Neural Aesthetics System (v2.6)
 
-## 1. Core Philosophy: "Intelligence in Motion"
-The design language reflects the persona of an AI/ML Engineer: precise, data-driven, yet organic and evolving. It combines the raw power of "void" aesthetics with the calculated precision of "cybernetic" interfaces.
+## 1. Core Philosophy: "Precision Intelligence"
+The design language reflects the persona of an elite AI/ML Engineer: high-efficiency, data-dense, and meticulously calculated. It rejects unnecessary whitespace in favor of immediate information availability. The aesthetic is "Cyber-Organic"—merging the cold logic of machine intelligence with the adaptive fluidity of neural networks.
 
-### 2. Color Palette ("Cyber-Organic")
+## 2. Color Architecture ("Deep Void")
+The palette is constructed to minimize eye strain during long operational cycles while maximizing signal-to-noise ratio.
 
 | Token | Color Value | Usage |
 | :--- | :--- | :--- |
-| **Canvas** | `#05050A` | Deep void background (almost black, slight violet tint). |
-| **Surface** | `#0F111A` | Card backgrounds, panels. |
-| **Primary** | `#8B5CF6` (Violet-500) | Main brand color (Intelligence, Neural Nets). |
-| **Accent** | `#06B6D4` (Cyan-500) | Highlights, functional elements (Data flow). |
-| **Text-Primary** | `#F8FAFC` | High contrast headings. |
-| **Text-Secondary** | `#94A3B8` | Body text, subtle details. |
+| **Void (Canvas)** | `#05050A` | Absolute background. Uses a radial gradient (`#1a1b26` center to `#000000` edge) to simulate depth. |
+| **Surface** | `#0F111A` | HUD panels, card backgrounds. |
+| **Neural (Primary)** | `#8B5CF6` (Violet-500) | Intelligence, Model Weights, key actions. |
+| **Stream (Accent)** | `#06B6D4` (Cyan-500) | Data flow, active states, cursors. |
+| **Signal (Text)** | `#F8FAFC` | High-priority output. |
+| **Noise (Text-Sec)**| `#94A3B8` | Contextual metadata. |
 
-### 3. Typography ("Tech-Functional")
-*   **Headings / Accents:** `JetBrains Mono` (Google Fonts). Used for branding, navigation, section headers, and data tags. Reflects code and terminal interfaces.
-*   **Body:** `Inter` (Google Fonts). Used for long-form content for maximum readability.
+## 3. Terminal Typography
+Type is treated as data. Legibility is paramount, but character is derived from code editors.
+*   **Data/Headers:** `JetBrains Mono` (Google Fonts). The native language of the engineer. Used for navigation, tags, and all structural elements.
+*   **Content:** `Inter` (Google Fonts). Highly legible sans-serif for long-form descriptions.
 
-### 4. Motion & Physics ("Cyber-Organic Motion") - *New in v2.3*
-Animations should feel like data processing or neural activation—smooth, calculated, and responsive.
-*   **Staggered Entry:** Lists and grids load items sequentially (`fade-in-up` with 100ms delay increments).
-*   **Floating:** Key elements (Hero text, featured cards) have a subtle, slow vertical float (`animate-float`) to mimic weightlessness in a digital void.
-*   **Shimmer:** Primary actions (Buttons) have a passing light effect on hover (`animate-shimmer`).
-*   **Glow:** Interactive elements pulse with a soft glow (`animate-pulse-glow`) to indicate activity.
+## 4. Cyber-Organic Motion
+Animations mimic the behavior of intelligent systems—never jarring, always purposeful.
+*   **Initialization:** Elements enter sequentially (`fade-in-up`), mimicking a system boot sequence.
+*   **Idle State:** Key entities (Hero text) "float" (`animate-float`) to suggest active suspension in a magnetic field.
+*   **Processing:** Interactive elements "shimmer" or "pulse" (`animate-shimmer`, `animate-pulse-glow`) to indicate readiness or processing status.
 
-### 5. UI Components ("Holographic Data Units") - *New in v2.3*
-*   **Tech Borders:** Cards use corner brackets or partial borders (pseudo-elements) instead of full solid borders, simulating a HUD (Heads-Up Display).
-*   **Glass Panels:** Use `backdrop-blur-md` with low-opacity backgrounds (`bg-surface/50`) to create depth.
-*   **Scanlines:** Images have a subtle horizontal line overlay or effect on hover to emphasize the digital nature of the work.
-*   **Gradients:**
-    *   *Void Gradient:* Radial gradient from center (`#1a1b26`) to edge (`#000000`) for the body background.
-    *   *Data Flow:* Linear gradients (Violet to Cyan) for text masks and borders.
+## 5. Holographic Interface Units
+The UI simulates a projected Heads-Up Display (HUD).
+*   **Tech Borders:** Components are defined by corner brackets or partial borders (`.tech-border`) rather than solid boxes.
+*   **Global Scanline:** A subtle, screen-wide horizontal scanline effect (`bg-scanlines`) overlays the entire viewport, unifying the experience as a digital artifact.
+*   **Glassmorphism:** Panels use `backdrop-blur-md` with `bg-white/5` (or dark equivalents) to layer information without obscuring the void.
 
-## 6. Layout
-*   **Hero:** Centered, commanding. "Building Intelligence Into Software" with gradient text.
-*   **Grid:** Responsive masonry-feel (though strictly grid) with generous gaps.
-*   **Carousel:** Infinite scroll for featured projects, representing a continuous data stream.
+## 6. Spatial Architecture (Layout)
+*   **High-Density:** Spacing is tight and efficient. Unnecessary padding is eliminated to maximize data density per pixel.
+*   **Immediate Visibility:** The "Hero" and "Featured Modules" (Carousel) share the initial viewport. The user should not need to scroll to see the work.
+*   **Data Stream (Carousel):** A continuous, infinite loop of featured projects. It implies a ceaseless stream of output.
+
+## 7. Micro-Interactions
+Every interaction should provide haptic-like visual feedback.
+*   **Hover:** Triggers a state change—borders brighten (`border-accent`), shadows evolve into glows (`shadow-neon`), and text may shift color.
+*   **Focus:** Input fields and active elements receive a hard, cyan focus ring to mimic target lock-on.
