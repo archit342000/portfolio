@@ -6,8 +6,8 @@ A personal portfolio website built with React, Vite, and Tailwind CSS.
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
-- npm (comes with Node.js)
+- Node.js (v24.13.0 or higher recommended)
+- npm (v11.6.2 or higher recommended)
 
 ### Installation
 
