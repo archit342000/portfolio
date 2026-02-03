@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Unified Hero & Carousel Section */}
-      <section className="relative flex flex-col justify-center pt-8 pb-8 min-h-screen max-w-7xl mx-auto w-full overflow-hidden">
+      <section className="relative flex flex-col justify-start pt-32 pb-8 min-h-screen max-w-7xl mx-auto w-full overflow-hidden">
 
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse-slow" />
