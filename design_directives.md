@@ -1,124 +1,39 @@
-# Neural Aesthetics System (v2.2) - Design Directives
+# Design Directives: Neural Aesthetics System (v2.3)
 
-**Architect:** Jules (AI Software Engineer)
-**Compliance Standard:** WCAG 2.1 AA  
-**Base Physics:** "Neural Aesthetics" + "Cyber-Organic" + "Glassmorphism" + "Motion Fidelity"
-**Date:** January 27, 2026
+## 1. Core Philosophy: "Intelligence in Motion"
+The design language reflects the persona of an AI/ML Engineer: precise, data-driven, yet organic and evolving. It combines the raw power of "void" aesthetics with the calculated precision of "cybernetic" interfaces.
 
----
+### 2. Color Palette ("Cyber-Organic")
 
-## 1. Tech Stack & Rationale
+| Token | Color Value | Usage |
+| :--- | :--- | :--- |
+| **Canvas** | `#05050A` | Deep void background (almost black, slight violet tint). |
+| **Surface** | `#0F111A` | Card backgrounds, panels. |
+| **Primary** | `#8B5CF6` (Violet-500) | Main brand color (Intelligence, Neural Nets). |
+| **Accent** | `#06B6D4` (Cyan-500) | Highlights, functional elements (Data flow). |
+| **Text-Primary** | `#F8FAFC` | High contrast headings. |
+| **Text-Secondary** | `#94A3B8` | Body text, subtle details. |
 
-- **Framework:** Tailwind CSS (v3.4+)
-- **Rationale:** Strict utility constraints for the 4px grid.
-- **CSS Methodology:** Semantic CSS Variables (`--sys-*`) mapped to Tailwind.
-- **Iconography:** Lucide React (Stroke width: 1.5px, Sharp edges preferred where possible).
-- **Motion Engine:** CSS Transitions for micro-interactions; `animate-*` utilities for ambiance.
+### 3. Typography ("Tech-Functional")
+*   **Headings / Accents:** `JetBrains Mono` (Google Fonts). Used for branding, navigation, section headers, and data tags. Reflects code and terminal interfaces.
+*   **Body:** `Inter` (Google Fonts). Used for long-form content for maximum readability.
 
----
+### 4. Motion & Physics ("Cyber-Organic Motion") - *New in v2.3*
+Animations should feel like data processing or neural activation—smooth, calculated, and responsive.
+*   **Staggered Entry:** Lists and grids load items sequentially (`fade-in-up` with 100ms delay increments).
+*   **Floating:** Key elements (Hero text, featured cards) have a subtle, slow vertical float (`animate-float`) to mimic weightlessness in a digital void.
+*   **Shimmer:** Primary actions (Buttons) have a passing light effect on hover (`animate-shimmer`).
+*   **Glow:** Interactive elements pulse with a soft glow (`animate-pulse-glow`) to indicate activity.
 
-## 2. Global Tokens & Theme Strategy
+### 5. UI Components ("Holographic Data Units") - *New in v2.3*
+*   **Tech Borders:** Cards use corner brackets or partial borders (pseudo-elements) instead of full solid borders, simulating a HUD (Heads-Up Display).
+*   **Glass Panels:** Use `backdrop-blur-md` with low-opacity backgrounds (`bg-surface/50`) to create depth.
+*   **Scanlines:** Images have a subtle horizontal line overlay or effect on hover to emphasize the digital nature of the work.
+*   **Gradients:**
+    *   *Void Gradient:* Radial gradient from center (`#1a1b26`) to edge (`#000000`) for the body background.
+    *   *Data Flow:* Linear gradients (Violet to Cyan) for text masks and borders.
 
-### 2.1. Brand Palette (Neural)
-
-The "Neural" theme is designed for the AI/ML Engineer persona: sophisticated, data-driven, and futuristic.
-
-| Token Name | Hue | Light (Hex) | Dark (Hex) | Usage |
-| :--- | :--- | :--- | :--- | :--- |
-| primary | Violet | #7C3AED | #8B5CF6 | Dominant Brand / Key Actions |
-| accent | Cyan | #06B6D4 | #22D3EE | Data Highlights / Secondary Actions |
-| surface | Void | #FFFFFF | #030712 | Backgrounds (Deepest Black/Blue) |
-
-### 2.2. Functional Palette
-
-| Token Name | Hue | Light (Hex) | Dark (Hex) | Usage |
-| :--- | :--- | :--- | :--- | :--- |
-| secondary | Slate | #475569 | #94A3B8 | Supporting text |
-| tertiary | Indigo | #4F46E5 | #6366F1 | Nuance / Depth |
-| neutral | Zinc | #18181B | #E4E4E7 | Text |
-| error | Rose | #E11D48 | #FB7185 | Errors |
-| success | Emerald | #059669 | #34D399 | Success |
-
-### 2.3. Semantic Aliases
-
-#### Backgrounds
-- `--bg-canvas`: Page root (Light: Zinc-50 / Dark: #020617 - Slate-950/Void)
-- `--bg-surface`: Card/Container (Light: White / Dark: #0f172a - Slate-900)
-- `--bg-surface-elevated`: Modals (Light: White / Dark: #1e293b - Slate-800)
-- `--bg-glass`: Glassmorphism (Light: White/80 / Dark: #0f172a/60)
-
-#### Content
-- `--text-primary`: High emphasis (Light: Zinc-900 / Dark: Zinc-50)
-- `--text-secondary`: Medium emphasis (Light: Zinc-500 / Dark: Zinc-400)
-- `--text-mono`: Code/Data (Primary Color in Dark Mode for emphasis)
-
-#### Borders
-- `--border-base`: Decorative (Light: Zinc-200 / Dark: #1e293b - Slate-800)
-- `--border-glow`: Interactive (Primary-500 with opacity)
-
-### 2.4. Visual Fidelity Strategy
-
-- **Grid Background:** A subtle dot or mesh grid pattern on the canvas to simulate a "blueprint" or "digital workspace".
-- **Neon Glows:** Shadows should not be black. They should be colored (Violet/Cyan) to create a glow effect.
-  - *Tailwind:* `shadow-lg shadow-primary-500/20`.
-- **Tech Borders:** Thin, subtle borders.
-  - *Tailwind:* `border border-white/5` (Dark).
-
-### 2.5. Typography System
-
-- **Font Family (Body):** `Inter`, sans-serif.
-- **Font Family (Tech):** `JetBrains Mono`, monospace. (Used for: Headers, Tags, Metadata, Code).
-- **Scale:**
-  - **Display:** `font-sans` Bold
-  - **Headline:** `font-mono` Bold (Tech/Engineering feel)
-  - **Body:** `font-sans` Regular
-  - **Code:** `font-mono` Medium
-
----
-
-## 3. Spatial System
-
-- **Grid:** 4px baseline.
-- **Radius:**
-  - **Outer:** `rounded-2xl` (Cards, Modals)
-  - **Inner:** `rounded-lg` (Buttons, Inputs)
-
----
-
-## 4. Motion & Behavior
-
-- **Hover:** "Levitate & Glow"
-  - `hover:-translate-y-1 hover:shadow-primary-500/30 hover:border-primary-500/50`
-- **Load:** "Fade In Up"
-- **Scroll:** Infinite marquis for tech stack (Carousel).
-
----
-
-## 5. Component Specs
-
-### 5.1. Atoms
-
-- **Buttons:**
-  - **Primary:** `bg-primary text-white font-mono shadow-lg shadow-primary-500/25 hover:shadow-primary-500/50 rounded-lg`.
-  - **Ghost:** `text-primary hover:bg-primary/10 font-mono rounded-lg`.
-
-- **Tags/Badges:**
-  - `font-mono text-xs px-2 py-1 rounded-md bg-primary/10 text-primary border border-primary/20`.
-
-### 5.2. Molecules
-
-- **Project Card:**
-  - **Container:** `bg-surface/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden`.
-  - **Hover:** Glow effect + Border highlight.
-
-- **Hero Section:**
-  - **Title:** Large, Inter, Bold.
-  - **Subtitle:** JetBrains Mono, Typewriter effect (optional).
-  - **Background:** Radial gradient (Violet/Cyan) fading into the Void.
-
----
-
-## 6. Anti-Patterns
-1. **Boring Shadows:** No pure black shadows in dark mode.
-2. **System Fonts Only:** Must use JetBrains Mono for the tech vibe.
-3. **Flat Backgrounds:** Avoid flat colors; use subtle gradients or patterns.
+## 6. Layout
+*   **Hero:** Centered, commanding. "Building Intelligence Into Software" with gradient text.
+*   **Grid:** Responsive masonry-feel (though strictly grid) with generous gaps.
+*   **Carousel:** Infinite scroll for featured projects, representing a continuous data stream.

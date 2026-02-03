@@ -1,78 +1,118 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 :root {
-  /* Neural Theme - Light */
-  --primary-light: #7C3AED; /* Violet 600 */
-  --primary-dark: #8B5CF6;  /* Violet 500 */
-
-  /* Backgrounds - Light */
-  --bg-canvas: #f8fafc; /* Slate-50 */
+  /* Light Mode - Base Material */
+  --bg-canvas: #fafafa;
   --bg-surface: #ffffff;
   --bg-surface-elevated: #ffffff;
-  --bg-surface-variant: #f1f5f9; /* Slate-100 */
+  --bg-surface-variant: #f4f4f5;
+  --primary: #8b5cf6;
 
-  /* Content - Light */
-  --text-primary: #0f172a; /* Slate-900 */
-  --text-secondary: #64748b; /* Slate-500 */
-  --text-disabled: rgba(0, 0, 0, 0.38);
+  --text-primary: #18181b;
+  --text-secondary: #71717a;
+  --text-disabled: #a1a1aa;
   --text-on-brand: #ffffff;
-  --text-mono: #6d28d9; /* Violet 700 */
+  --text-mono: #5b21b6;
 
-  /* Borders - Light */
-  --border-base: #e2e8f0; /* Slate-200 */
-  --border-control: #cbd5e1; /* Slate-300 */
-  --border-glow: rgba(124, 58, 237, 0.5);
-
-  /* Assignments */
-  --primary: var(--primary-light);
+  --border-base: #e4e4e7;
+  --border-control: #d4d4d8;
+  --border-glow: rgba(139, 92, 246, 0.5);
 }
 
 .dark {
-  /* Neural Theme - Dark */
-  /* Backgrounds - Dark */
-  --bg-canvas: #030712; /* Gray-950 (Void) */
-  --bg-surface: #0f172a; /* Slate-900 */
-  --bg-surface-elevated: #1e293b; /* Slate-800 */
-  --bg-surface-variant: #1e293b; /* Slate-800 */
+  /* Neural Aesthetics (v2.3) - Void Gradient */
+  --bg-canvas: #05050a; /* Fallback */
+  --bg-surface: #0f111a;
+  --bg-surface-elevated: #1a1d2d;
+  --bg-surface-variant: #1e293b;
+  --primary: #8b5cf6;
 
-  /* Content - Dark */
-  --text-primary: #f8fafc; /* Slate-50 */
-  --text-secondary: #94a3b8; /* Slate-400 */
-  --text-disabled: rgba(255, 255, 255, 0.38);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-disabled: #475569;
   --text-on-brand: #ffffff;
-  --text-mono: #a78bfa; /* Violet 400 */
+  --text-mono: #a78bfa;
 
-  /* Borders - Dark */
-  --border-base: #1e293b; /* Slate-800 */
-  --border-control: #334155; /* Slate-700 */
+  --border-base: #1e293b;
+  --border-control: #334155;
   --border-glow: rgba(139, 92, 246, 0.5);
-
-  /* Assignments */
-  --primary: var(--primary-dark);
 }
 
 @layer base {
   body {
-    background-color: var(--bg-canvas);
-    color: var(--text-primary);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    @apply bg-canvas text-primary font-sans antialiased transition-colors duration-300;
   }
 
+  /* Deep Void Gradient for Dark Mode */
   .dark body {
-    /* Subtle deep gradient for the Void effect */
-    background-image: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #030712 60%);
+    background: radial-gradient(circle at 50% 0%, #1a1b26 0%, #05050a 100%);
     background-attachment: fixed;
   }
 }
 
-@layer utilities {
-  .glass {
-    @apply backdrop-blur-md bg-white/70 dark:bg-slate-900/60 border border-white/20 dark:border-white/5;
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 bg-primary-600 text-white shadow hover:bg-primary-500/90 h-9 px-4 py-2 font-mono;
   }
 
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary disabled:pointer-events-none disabled:opacity-50 border border-base bg-transparent shadow-sm hover:bg-surface-variant text-primary h-9 px-4 py-2 font-mono;
+  }
+
+  /* v2.3 New Components */
+  .glass-panel {
+    @apply bg-white/50 dark:bg-black/50 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+
+  /* Holographic Card Container */
+  .tech-card-container {
+    @apply relative overflow-hidden bg-white/40 dark:bg-black/40 backdrop-blur-sm border border-white/5 rounded-xl transition-all duration-500;
+  }
+
+  /* Tech Corners using Pseudo-elements */
+  .tech-border::before,
+  .tech-border::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .tech-border::before {
+    top: 0;
+    left: 0;
+    border-top: 1px solid theme('colors.accent.500');
+    border-left: 1px solid theme('colors.accent.500');
+  }
+
+  .tech-border::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid theme('colors.accent.500');
+    border-right: 1px solid theme('colors.accent.500');
+  }
+
+  .group:hover .tech-border::before,
+  .group:hover .tech-border::after {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    border-color: theme('colors.primary.500');
+  }
+}
+
+@layer utilities {
   .text-glow {
-    text-shadow: 0 0 20px var(--primary);
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+
+  .shimmer-bg {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-size: 200% 100%;
   }
 }
