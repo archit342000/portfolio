@@ -46,11 +46,27 @@ To preview the production build locally:
 npm run preview
 ```
 
-## deployment
+## Deployment
 
-This project is configured for deployment on GitHub Pages.
-- `base` is set to `./` in `vite.config.js` to support relative paths.
-- The build artifacts in `dist/` are what should be deployed.
+This project is configured for easy deployment to GitHub Pages.
+
+**Important:** You do **not** run a local server (like `npm run dev`) on GitHub Pages. GitHub Pages is a "static host", which means it simply serves the files we generate. We generate these files using the `build` command, and then upload them.
+
+### How to Deploy
+
+We have set up a script to automate this process.
+
+1.  Make sure all your changes are committed to git.
+2.  Run the deploy command:
+    ```bash
+    npm run deploy
+    ```
+
+This command will automatically:
+1.  Run `npm run build` to generate the production files in the `dist` folder.
+2.  Use the `gh-pages` tool to upload that `dist` folder to a `gh-pages` branch on your GitHub repository.
+
+After a few minutes, your site will be live at `https://<your-username>.github.io/<repository-name>/`.
 
 ## FAQ
 
