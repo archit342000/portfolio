@@ -17,6 +17,9 @@ export default {
           400: '#a78bfa', // Violet 400
           500: '#8b5cf6', // Violet 500
           600: '#7c3aed', // Violet 600
+          800: '#5b21b6', // Violet 800
+          900: '#4c1d95', // Violet 900
+          950: '#2e1065', // Violet 950
         },
         accent: {
           DEFAULT: '#06b6d4', // Cyan 500

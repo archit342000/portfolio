@@ -5,13 +5,13 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Unified Hero & Carousel Section */}
-      <section className="relative flex flex-col justify-between pt-14 pb-8 min-h-screen max-w-7xl mx-auto w-full overflow-hidden">
+      <section className="relative flex flex-col justify-between pt-8 pb-8 min-h-screen max-w-7xl mx-auto w-full overflow-hidden">
 
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse-slow" />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center flex-grow px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
+        <div className="relative z-10 flex flex-col items-center flex-grow px-4 pt-10 sm:px-6 lg:px-8 text-center animate-fade-in-up">
 
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-primary mb-4 tracking-tighter leading-tight">
               Building Intelligence <br/>
