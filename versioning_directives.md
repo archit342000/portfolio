@@ -13,10 +13,10 @@ Versions are defined as `MAJOR.MINOR.PATCH`:
 ## Change Management
 
 - Every release should be accompanied by a tag in the version control system (e.g., `git tag v1.0.0`).
-- Major changes should be documented in a `CHANGELOG.md` file (if applicable).
+- Every version change must append the changes made in the CHANGELOG.md file.
 
 ## Current Status
 
 The current version of the portfolio is tracked in the repository tags.
 
-- **Initial Release:** v1.0.0
+Current version - v0.0.1
