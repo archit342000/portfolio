@@ -4,19 +4,20 @@ import { ArrowRight, Terminal } from 'lucide-react';
 const Home = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative flex flex-col justify-center px-4 sm:px-6 lg:px-8 py-24 lg:py-40 max-w-7xl mx-auto w-full text-center overflow-hidden">
+      {/* Unified Hero & Carousel Section */}
+      <section className="relative flex flex-col justify-between pt-24 pb-12 min-h-screen max-w-7xl mx-auto w-full overflow-hidden">
 
         {/* Ambient Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary-600/20 blur-[120px] rounded-full pointer-events-none animate-pulse-slow" />
 
-        <div className="relative z-10 animate-fade-in-up">
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center flex-grow px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface/80 border border-white/10 backdrop-blur-md mb-8 animate-float">
                 <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500"></span>
                 </span>
-                <span className="text-xs font-mono text-secondary tracking-wide">SYSTEM ONLINE v2.3</span>
+                <span className="text-xs font-mono text-secondary tracking-wide">SYSTEM ONLINE v2.4</span>
             </div>
 
             <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold text-primary mb-8 tracking-tighter leading-tight">
@@ -31,7 +32,7 @@ const Home = () => {
               Specializing in <span className="text-primary-400">Deep Learning</span> and <span className="text-primary-400">Scalable Systems</span>.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-6 animate-fade-in-up [animation-delay:400ms]">
+            <div className="flex flex-col sm:flex-row justify-center gap-6 animate-fade-in-up [animation-delay:400ms] mb-12">
               <a href="#projects" className="group relative font-mono px-8 py-4 rounded bg-primary-600 text-white font-bold overflow-hidden transition-all hover:scale-105 shadow-lg shadow-primary-500/25">
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
                 <span className="relative flex items-center">
@@ -44,23 +45,20 @@ const Home = () => {
               </a>
             </div>
         </div>
-      </section>
 
-      {/* Projects Carousel */}
-      <section id="projects" className="py-24 bg-canvas/50 relative border-y border-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-          <h2 className="text-3xl font-bold font-mono text-primary mb-4 flex items-center justify-center gap-3">
-             <span className="w-8 h-px bg-accent-500/50" />
-             Featured Modules
-             <span className="w-8 h-px bg-accent-500/50" />
-          </h2>
-          <p className="text-secondary max-w-xl mx-auto">Selected works demonstrating high-performance engineering and algorithmic precision.</p>
+        {/* Integrated Carousel */}
+        <div id="projects" className="relative z-10 w-full animate-fade-in-up [animation-delay:600ms]">
+           <div className="flex items-center justify-center gap-3 mb-6 opacity-60">
+             <span className="w-12 h-px bg-gradient-to-r from-transparent to-accent-500" />
+             <span className="font-mono text-xs text-accent-400 uppercase tracking-[0.2em]">Featured Modules</span>
+             <span className="w-12 h-px bg-gradient-to-l from-transparent to-accent-500" />
+           </div>
+           <Carousel className="py-4" />
         </div>
-        <Carousel />
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-4 text-center relative overflow-hidden">
+      <section className="py-32 px-4 text-center relative overflow-hidden bg-canvas/50 border-t border-white/5">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-900/10 pointer-events-none" />
 
         <div className="max-w-3xl mx-auto relative z-10">
