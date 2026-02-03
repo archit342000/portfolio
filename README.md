@@ -1,16 +1,59 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
 
-## React Compiler
+- Node.js (v18 or higher recommended)
+- npm (comes with Node.js)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Installation
 
-## Expanding the ESLint configuration
+1. Clone the repository (if you haven't already).
+2. Install dependencies:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   ```bash
+   npm install
+   ```
+
+### Running Locally (Development)
+
+To start the development server with hot reloading:
+
+```bash
+npm run dev
+```
+
+Then open your browser and navigate to the URL shown in the terminal (usually `http://localhost:5173`).
+
+### Building for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+### Previewing Production Build
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## deployment
+
+This project is configured for deployment on GitHub Pages.
+- `base` is set to `./` in `vite.config.js` to support relative paths.
+- The build artifacts in `dist/` are what should be deployed.
+
+## FAQ
+
+**Q: Can I just open `index.html` or `dist/index.html` in my browser?**
+
+A: **No.** Modern JavaScript frameworks like React use "ES Modules," which browsers block for security reasons when opening files directly from your hard drive (`file://` protocol). You must use a local web server (like `npm run dev` or `npm run preview`) to view the site.
