@@ -1,5 +1,6 @@
 import { motion as Motion } from 'framer-motion';
-import ProjectCard from './ProjectCard';
+import Carousel from './Carousel';
+import { Link } from 'react-router-dom';
 
 const projects = [
   {
@@ -65,41 +66,33 @@ const Hero = () => {
             Here are some of the projects I&apos;ve been working on.
           </Motion.p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               className="rounded-full bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400"
             >
               View Projects
-            </a>
-            <a href="#about" className="text-sm font-semibold leading-6 text-zinc-900 dark:text-zinc-100">
+            </Link>
+            <Link to="/about" className="text-sm font-semibold leading-6 text-zinc-900 dark:text-zinc-100">
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 
-        {/* Selected Projects Grid */}
-        <div id="projects" className="mt-24 sm:mt-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl text-center">
-                    <h2 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50">Selected Projects</h2>
-                    <p className="mt-2 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-                        A collection of my recent work in AI and software engineering.
-                    </p>
+        {/* Carousel Section */}
+        <div className="mt-16 sm:mt-24">
+            <Motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.4 }}
+                className="relative"
+            >
+                <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                    <div className="mx-auto max-w-2xl text-center mb-8">
+                         <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">Featured Work</p>
+                    </div>
                 </div>
-                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-                    {projects.map((project, index) => (
-                        <Motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                            <ProjectCard project={project} />
-                        </Motion.div>
-                    ))}
-                </div>
-            </div>
+                <Carousel projects={projects} />
+            </Motion.div>
         </div>
       </div>
 
