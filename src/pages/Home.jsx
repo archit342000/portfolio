@@ -13,7 +13,7 @@ const Home = () => {
           </span>
         </h1>
         <p className="max-w-2xl mx-auto text-xl text-secondary mb-10">
-          I am a Software Engineer specializing in Artificial Intelligence.
+          I am a Software Engineer specializing in Artificial Intelligence and Machine Learning.
           I bridge the gap between complex models and user-centric applications.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">

@@ -1,11 +1,13 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useTheme } from '../hooks/useTheme';
 
 const Layout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,10 +45,23 @@ const Layout = () => {
               <a href="https://github.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full hover:bg-surface-variant text-secondary hover:text-primary transition-colors focus:outline-none"
+                aria-label="Toggle Theme"
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
+            {/* Mobile Menu Button & Theme Toggle */}
+            <div className="md:hidden flex items-center gap-4">
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full hover:bg-surface-variant text-secondary hover:text-primary transition-colors focus:outline-none"
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="p-2 rounded-md text-secondary hover:text-primary hover:bg-surface-variant focus:outline-none"
