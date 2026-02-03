@@ -48,7 +48,7 @@
   --border-control: #3f3f46; /* Zinc-700 */
 
   /* Assignments */
-  --primary: var(--color-primary-dark);
+  --primary: var(--primary-dark);
 }
 
 @layer base {

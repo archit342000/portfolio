@@ -42,6 +42,7 @@ const Layout = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               <Link to="/" className="text-sm font-medium hover:text-primary transition-colors text-secondary hover:text-primary">Home</Link>
+              <Link to="/projects" className="text-sm font-medium hover:text-primary transition-colors text-secondary hover:text-primary">Projects</Link>
               <a href="https://github.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-primary transition-colors">
                 <Github size={20} />
               </a>
@@ -78,6 +79,9 @@ const Layout = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link to="/" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface-variant text-secondary hover:text-primary">
                 Home
+              </Link>
+              <Link to="/projects" className="block px-3 py-2 rounded-md text-base font-medium hover:bg-surface-variant text-secondary hover:text-primary">
+                Projects
               </Link>
             </div>
           </div>
