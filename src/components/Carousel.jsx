@@ -5,7 +5,7 @@ const Carousel = ({ projects }) => {
   const duplicatedProjects = [...projects, ...projects, ...projects];
 
   return (
-    <div className="w-full overflow-hidden py-8">
+    <div className="w-full overflow-hidden py-12">
       <div className="relative flex overflow-hidden mask-linear-gradient">
         <div
           className="flex w-max gap-8 px-4 animate-scroll hover:[animation-play-state:paused]"

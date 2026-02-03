@@ -22,19 +22,19 @@ const Hero = () => {
 
       <div className="flex flex-col">
         {/* Title Section - Placed at the top */}
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-8 sm:pt-12 text-center">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 pt-12 sm:pt-20 text-center">
             <Motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
+              className="text-5xl font-extrabold tracking-tighter text-zinc-900 sm:text-7xl dark:text-zinc-50"
             >
-              Building the future with <span className="text-indigo-600 dark:text-indigo-400">AI & Code</span>
+              Building the future with <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400">AI & Code</span>
             </Motion.h1>
         </div>
 
         {/* Carousel Section - Placed in the middle */}
-        <div className="w-full mb-12 mt-12">
+        <div className="w-full mb-16 mt-8">
             <Motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}

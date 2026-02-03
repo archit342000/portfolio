@@ -4,7 +4,7 @@
 
 @layer utilities {
   .mask-linear-gradient {
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
   }
 }
 
