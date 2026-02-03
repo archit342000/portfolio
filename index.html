@@ -10,7 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div style="font-family: 'Inter', system-ui, sans-serif; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #FAFAFA; color: #18181B;">
+        <div style="width: 40px; height: 40px; border: 4px solid #E4E4E7; border-top-color: #4F46E5; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+        <h1 style="margin-top: 1.5rem; font-size: 1.5rem; font-weight: 600;">Loading Portfolio...</h1>
+        <p style="margin-top: 0.5rem; color: #71717A;">Building the future with AI & Code</p>
+        <style>
+          @keyframes spin {
+            to { transform: rotate(360deg); }
+          }
+          @media (prefers-color-scheme: dark) {
+            div[style*="background-color: #FAFAFA"] { background-color: #09090B !important; color: #FAFAFA !important; }
+            div[style*="border: 4px solid #E4E4E7"] { border-color: #27272A !important; border-top-color: #818CF8 !important; }
+            p { color: #A1A1AA !important; }
+          }
+        </style>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
