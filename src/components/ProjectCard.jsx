@@ -35,7 +35,7 @@ const ProjectCard = ({ project, className = "" }) => (
           {project.title}
         </h3>
 
-        <p className="text-sm text-secondary line-clamp-2 mb-6 flex-grow leading-relaxed group-hover:text-gray-300 transition-colors">
+        <p className="text-sm text-secondary line-clamp-2 mb-6 flex-grow leading-relaxed group-hover:text-gray-900 dark:group-hover:text-gray-300 transition-colors">
           {project.description}
         </p>
 
