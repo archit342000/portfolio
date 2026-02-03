@@ -25,7 +25,7 @@ const Home = () => {
               Specializing in <span className="text-primary-400">Deep Learning</span> and <span className="text-primary-400">Scalable Systems</span>.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up [animation-delay:400ms] mb-6">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up [animation-delay:400ms] mb-4">
               <a href="#projects" className="group relative font-mono px-6 py-3 rounded bg-primary-600 text-white font-bold overflow-hidden transition-all hover:scale-105 shadow-lg shadow-primary-500/25">
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
                 <span className="relative flex items-center">
@@ -40,7 +40,7 @@ const Home = () => {
         </div>
 
         {/* Integrated Carousel */}
-        <div id="projects" className="relative z-10 w-full mt-16 animate-fade-in-up [animation-delay:600ms]">
+        <div id="projects" className="relative z-10 w-full mt-8 animate-fade-in-up [animation-delay:600ms]">
            <div className="flex items-center justify-center gap-3 mb-4 opacity-60">
              <span className="w-12 h-px bg-gradient-to-r from-transparent to-accent-500" />
              <span className="font-mono text-xs text-accent-400 uppercase tracking-[0.2em]">Featured Modules</span>
