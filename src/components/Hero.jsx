@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
-import { ArrowDown } from 'lucide-react';
 
 const projects = [
   {
@@ -63,8 +61,8 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400"
           >
-            I'm a software engineer specializing in artificial intelligence and modern web technologies.
-            Here are some of the projects I've been working on.
+            I&apos;m a software engineer specializing in artificial intelligence and modern web technologies.
+            Here are some of the projects I&apos;ve been working on.
           </Motion.p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
