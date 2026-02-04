@@ -1,4 +1,4 @@
-# Design Directives: Neural Aesthetics System (v2.6)
+# Design Directives: Neural Aesthetics System (v2.7)
 
 ## 1. Core Philosophy: "Precision Intelligence"
 The design language reflects the persona of an elite AI/ML Engineer: high-efficiency, data-dense, and meticulously calculated. It rejects unnecessary whitespace in favor of immediate information availability. The aesthetic is "Cyber-Organic"—merging the cold logic of machine intelligence with the adaptive fluidity of neural networks.
@@ -14,6 +14,7 @@ The palette is constructed to minimize eye strain during long operational cycles
 | **Stream (Accent)** | `#06B6D4` (Cyan-500) | Data flow, active states, cursors. |
 | **Signal (Text)** | `#F8FAFC` | High-priority output. |
 | **Noise (Text-Sec)**| `#94A3B8` | Contextual metadata. |
+| **Grid (Texture)** | `#ffffff` (5% Opacity) | Background grid lines. |
 
 ## 3. Terminal Typography
 Type is treated as data. Legibility is paramount, but character is derived from code editors.
@@ -41,3 +42,8 @@ The UI simulates a projected Heads-Up Display (HUD).
 Every interaction should provide haptic-like visual feedback.
 *   **Hover:** Triggers a state change—borders brighten (`border-accent`), shadows evolve into glows (`shadow-neon`), and text may shift color.
 *   **Focus:** Input fields and active elements receive a hard, cyan focus ring to mimic target lock-on.
+
+## 8. Digital Texture & HUD
+The "Void" must not be empty. It represents a latent space of possibilities.
+*   **Grid Mesh:** A subtle background grid (`bg-grid-pattern`) provides spatial reference, resembling a vector field or blueprint.
+*   **Data Ornamentation:** Decorative technical metadata (e.g., "SYS.ONLINE", coordinates, version numbers) should anchor the corners of the viewport. These elements add realism to the "system interface" metaphor without distracting from the content.
