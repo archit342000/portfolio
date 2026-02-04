@@ -12,10 +12,10 @@ const TechStack = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl font-bold font-mono text-primary mb-4">
-            System Capabilities
+            Technical Skills
           </h2>
           <p className="text-secondary max-w-2xl mx-auto text-lg">
-            A comprehensive network of technologies powering my intelligent solutions.
+            The technologies and tools I use to build solutions.
           </p>
         </div>
 

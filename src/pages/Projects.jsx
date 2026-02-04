@@ -10,11 +10,11 @@ const Projects = () => {
       <div className="mb-16 text-center">
         <h1 className="text-4xl sm:text-5xl font-bold font-mono text-primary mb-6 animate-fade-in-up">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-accent-400">
-            Project Archives
+            My Projects
           </span>
         </h1>
         <p className="text-secondary max-w-2xl mx-auto text-lg animate-fade-in-up [animation-delay:200ms]">
-          Accessing complete database of engineering works and AI models.
+          A collection of my engineering work and AI models.
         </p>
       </div>
 

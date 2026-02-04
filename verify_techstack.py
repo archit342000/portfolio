@@ -8,9 +8,9 @@ def run():
         page.goto("http://localhost:5176")
         page.wait_for_selector("body")
 
-        # Verify TechStack exists
-        if not page.query_selector("text=System Capabilities"):
-            print("FAILURE: 'System Capabilities' header not found")
+        # Verify TechStack header with updated text
+        if not page.query_selector("text=Technical Skills"):
+            print("FAILURE: 'Technical Skills' header not found")
             exit(1)
 
         # Verify a specific skill exists
@@ -18,8 +18,7 @@ def run():
             print("FAILURE: 'PyTorch' skill not found")
             exit(1)
 
-        page.screenshot(path="techstack_verification.png", full_page=True)
-        print("SUCCESS: TechStack verified and screenshot saved.")
+        print("SUCCESS: TechStack verified with professional copy.")
         browser.close()
 
 if __name__ == "__main__":

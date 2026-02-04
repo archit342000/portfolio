@@ -35,7 +35,7 @@ const Home = () => {
               </a>
 
               <a href="mailto:contact@example.com" className="group font-mono px-6 py-3 rounded bg-transparent border border-white/10 text-secondary font-bold hover:text-white hover:border-accent-500/50 hover:bg-surface/50 transition-all hover:scale-105 backdrop-blur-sm">
-                Contact Protocol
+                Contact Me
               </a>
             </div>
         </div>
@@ -44,7 +44,7 @@ const Home = () => {
         <div id="projects" className="relative z-10 w-full mt-8 animate-fade-in-up [animation-delay:600ms]">
            <div className="flex items-center justify-center gap-3 mb-4 opacity-60">
              <span className="w-12 h-px bg-gradient-to-r from-transparent to-accent-500" />
-             <span className="font-mono text-xs text-accent-400 uppercase tracking-[0.2em]">Featured Modules</span>
+             <span className="font-mono text-xs text-accent-400 uppercase tracking-[0.2em]">Featured Projects</span>
              <span className="w-12 h-px bg-gradient-to-l from-transparent to-accent-500" />
            </div>
            <Carousel className="py-2" />
@@ -63,7 +63,7 @@ const Home = () => {
           <p className="text-secondary mb-8 text-lg">Let's build something intelligent.</p>
 
           <a href="mailto:contact@example.com" className="inline-flex items-center text-accent-400 font-mono font-bold text-xl hover:text-accent-300 transition-colors group">
-            <span className="border-b-2 border-accent-500/30 group-hover:border-accent-400 pb-1">Initialize Contact</span>
+            <span className="border-b-2 border-accent-500/30 group-hover:border-accent-400 pb-1">Get in Touch</span>
             <ArrowRight className="ml-3 transition-transform group-hover:translate-x-2" size={24} />
           </a>
         </div>

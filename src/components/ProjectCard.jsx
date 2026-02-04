@@ -40,7 +40,7 @@ const ProjectCard = ({ project, className = "" }) => (
         </p>
 
         <div className="font-mono flex items-center text-primary-400 text-xs font-bold uppercase tracking-wider mt-auto group-hover:text-accent-400 transition-colors">
-          <span>Initialize</span>
+          <span>View Details</span>
           <ArrowRight size={14} className="ml-2 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
       </div>

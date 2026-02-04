@@ -34,10 +34,16 @@ The UI simulates a projected Heads-Up Display (HUD).
 
 ## 6. Spatial Architecture (Layout)
 *   **High-Density:** Spacing is tight and efficient. Unnecessary padding is eliminated to maximize data density per pixel.
-*   **Immediate Visibility:** The "Hero" and "Featured Modules" (Carousel) share the initial viewport. The user should not need to scroll to see the work.
+*   **Immediate Visibility:** The "Hero" and "Featured Projects" (Carousel) share the initial viewport. The user should not need to scroll to see the work.
 *   **Data Stream (Carousel):** A continuous, infinite loop of featured projects. It implies a ceaseless stream of output.
 
 ## 7. Micro-Interactions
 Every interaction should provide haptic-like visual feedback.
 *   **Hover:** Triggers a state change—borders brighten (`border-accent`), shadows evolve into glows (`shadow-neon`), and text may shift color.
 *   **Focus:** Input fields and active elements receive a hard, cyan focus ring to mimic target lock-on.
+
+## 8. Language & Copy
+**CRITICAL:** The "Theme" applies ONLY to the visual design (colors, fonts, shapes).
+*   **Use Normal Human Language:** All user-facing text must be professional, clear, and standard English (e.g., "Contact Me", "View Projects", "Skills").
+*   **No Thematic Jargon:** Strictly PROHIBIT "sci-fi" or "role-playing" terminology such as "Initialize", "Protocol", "Modules", "Archives", or "System Capabilities" in button labels, headers, or body text.
+*   **Clarity Over Style:** The copy should clearly communicate the engineer's expertise without abstraction.
