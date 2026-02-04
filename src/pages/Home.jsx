@@ -1,4 +1,5 @@
 import Carousel from '../components/Carousel';
+import TechStack from '../components/TechStack';
 import { ArrowRight, Terminal } from 'lucide-react';
 
 const Home = () => {
@@ -49,6 +50,9 @@ const Home = () => {
            <Carousel className="py-2" />
         </div>
       </section>
+
+      {/* Tech Stack Section */}
+      <TechStack />
 
       {/* CTA Section */}
       <section className="py-24 px-4 text-center relative overflow-hidden bg-canvas/50 border-t border-white/5">
